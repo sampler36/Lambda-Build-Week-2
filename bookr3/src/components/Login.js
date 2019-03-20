@@ -1,19 +1,19 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { login } from '../state/actionCreators';
-import '../App.css';
+import React from "react";
+import { connect } from "react-redux";
+import { login } from "../state/actionCreators";
+import "../App.css";
 
 export class Login extends React.Component {
-  userRef = React.createRef()
+  userRef = React.createRef();
 
-  passRef = React.createRef()
+  passRef = React.createRef();
 
   onLogin = () => {
     const username = this.userRef.current.value;
     const password = this.passRef.current.value;
 
     this.props.login(username, password);
-  }
+  };
 
   render() {
     return (
@@ -23,19 +23,34 @@ export class Login extends React.Component {
         {/* <div>password <input type="text" ref={this.passRef} /></div> */}
 
         <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate" ref={this.userRef}   />
-          <label for="email">Username</label>
-        </div>
+          <div class="input-field col s12">
+            <input
+              id="email"
+              type="email"
+              class="validate"
+              ref={this.userRef}
+            />
+            <label for="email">Username</label>
+          </div>
 
-        <div className="input-field col s12 color-white">
-          <input id="password" type="password" class="validate" ref={this.passRef} />
-          <label for="password">Password</label>
+          <div className="input-field col s12 color-white">
+            <input
+              id="password"
+              type="password"
+              class="validate"
+              ref={this.passRef}
+            />
+            <label for="password">Password</label>
+          </div>
+          <div>
+            <button onClick={this.onLogin}>Log in</button>
+          </div>
+
+          <div>
+            {/* Create a Log Out button that flushes 'userToken' from local storage */}
+            <button onClick={() => localStorage.clear()}>Log Out</button>
+          </div>
         </div>
-        <button onClick={this.onLogin}>Log in</button>
-        {/* Create a Log Out button that flushes 'userToken' from local storage */}
-        <button onClick={() => localStorage.clear()}>Log Out</button>
-      </div>
       </div>
     );
   }
@@ -43,4 +58,7 @@ export class Login extends React.Component {
 
 // 3 do the actual connecting
 
-export default connect(null, { login })(Login);
+export default connect(
+  null,
+  { login }
+)(Login);
