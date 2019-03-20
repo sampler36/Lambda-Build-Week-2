@@ -39,6 +39,7 @@ nav{
 .nav-menu li {
 display: inline;
 list-style:none;
+color: #342e28;
 }
 .nav-menu_link{
   display: inline-block;
@@ -48,12 +49,13 @@ list-style:none;
   border-radius: 5px;
   padding: 4px 8px;
   background-color: aliceblue;
+  color: #282c34;
 }
 .nav-menu_link:hover{
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border: 1px solid rgb(242, 238, 238);
-  background-color: rgb(19, 20, 22);
+  background-color: #282c34;
   color:aliceblue;
 }
 .logo-link{
@@ -66,7 +68,14 @@ list-style:none;
   height: 600px;
   background-size:cover;
   margin-bottom:50px;
-  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+
+
+}
+.home-image:hover{
+  transform: scale(1.08);
+  cursor: pointer;
+  transition: all 0.4s ease-out;
 
 }
 /* https://images-na.ssl-images-amazon.com/images/I/51XF%2BlqXPcL._SX369_BO1,204,203,200_.jpg
@@ -77,7 +86,7 @@ https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,
   margin: auto;
   padding-bottom:50px; 
 }
-.main-content h2 {
+.main-content h1 {
   text-align: center;
   margin: 5px;
   padding: 10px;
@@ -92,12 +101,29 @@ https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,
  
 }
 
+.home-thumbnail-1,
+.home-thumbnail-2
+.home-thumbnail-3{
+  background-size: cover;
+  width: 200px;
+  height: 300px;
+
+}
+.home-thumbnail-1:hover,
+.home-thumbnail-2:hover,
+.home-thumbnail-3:hover{
+  transform: scale(1.08);
+  cursor: pointer;
+
+}
+
 .home-thumbnail-1{
   background-image: url('https://images-na.ssl-images-amazon.com/images/I/51XF%2BlqXPcL._SX369_BO1,204,203,200_.jpg');
   background-size: cover;
   width: 200px;
   height: 300px;
   transition: all 0.3s ease-in-out;
+  border-radius: 20px;
 }
 .home-thumbnail-2{
   background-image: url('https://images-na.ssl-images-amazon.com/images/I/41tIgunlkBL._SX323_BO1,204,203,200_.jpg');
@@ -105,6 +131,7 @@ https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,
   width: 200px;
   height: 300px;
   transition: all 0.3s ease-in-out;
+  border-radius: 20px;
 }
 .home-thumbnail-3{
   background-image: url('https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,200_.jpg ');
@@ -112,4 +139,5 @@ https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,
   width: 200px;
   height: 300px;
   transition: all 0.3s ease-in-out;
+  border-radius: 20px;
 }

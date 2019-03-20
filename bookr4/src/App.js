@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar title="Bookr"/>
+        <Navbar title="Peaches Book Club"/>
         <Home title="Our Recomended List" />
       </div>
     );

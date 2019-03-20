@@ -25,11 +25,6 @@ const Navbar = (props) => (
       </li>
       <li>
         <a className="nav-menu_link" href="/">
-          Home
-        </a>
-      </li>
-      <li>
-        <a className="nav-menu_link" href="/">
           Contact Us
         </a>
       </li>
