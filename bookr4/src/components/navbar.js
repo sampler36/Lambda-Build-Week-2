@@ -1,10 +1,10 @@
 import React from "react";
 
-const Navbar = () => (
+const Navbar = (props) => (
   <nav>
     <h2 className="logo">
       <a className="logo-link" href="/">
-        Bookr
+        {props.title}
       </a>
     </h2>
     <ul className="nav-menu">
