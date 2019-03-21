@@ -1,33 +1,33 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = (props) => (
   <nav>
     <h2 className="logo">
-      <Link className="logo-link" to="/">
+      <NavLink className="logo-link" exact to="/">
         {props.title}
-      </Link>
+      </NavLink>
     </h2>
     <ul className="nav-menu">
       <li>
-        <Link className="nav-menu_link" to="/">
+        <NavLink className="nav-menu_link" to="/">
           Home
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="nav-menu_link" to="/books">
+        <NavLink className="nav-menu_link" to="/books">
           Books
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="nav-menu_link" to="/reviews">
+        <NavLink className="nav-menu_link" to="/reviews">
           Reviews
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link className="nav-menu_link" to="/login">
+        <NavLink className="nav-menu_link" to="/login">
           Login
-        </Link>
+        </NavLink>
       </li>
     </ul>
   </nav>

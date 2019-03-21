@@ -29,7 +29,7 @@
   color: white;
 }
 
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid grey;
@@ -37,13 +37,13 @@ nav{
   /* background-color: #61dafb; */
 }
 .nav-menu li {
-display: inline;
-list-style:none;
-color: #342e28;
+  display: inline;
+  list-style: none;
+  color: #342e28;
 }
-.nav-menu_link{
+.nav-menu_link {
   display: inline-block;
-  margin:5px;
+  margin: 5px;
   border: 1px solid grey;
   text-decoration: none;
   border-radius: 5px;
@@ -51,93 +51,109 @@ color: #342e28;
   background-color: aliceblue;
   color: #282c34;
 }
-.nav-menu_link:hover{
+.nav-menu_link:hover {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border: 1px solid rgb(242, 238, 238);
   background-color: #282c34;
-  color:aliceblue;
+  color: aliceblue;
 }
-.logo-link{
-  color:aliceblue;
+.nav-menu_link:active {
+  background-color: peachpuff;
+}
+.logo-link {
+  color: aliceblue;
   text-decoration: none;
 }
-.home-image{
-  background-image: url('https://lh3.googleusercontent.com/UTjuhsYUcGb5gO_x_lBs6U9YHH5dg6I3ckq9czd4_fa92VcxKoBXlFpAAgwFzovEeme0O_Xo2ERr1w=s400 ');
+.home-image {
+  background-image: url("https://lh3.googleusercontent.com/UTjuhsYUcGb5gO_x_lBs6U9YHH5dg6I3ckq9czd4_fa92VcxKoBXlFpAAgwFzovEeme0O_Xo2ERr1w=s400 ");
   width: 100%;
   height: 600px;
-  background-size:cover;
-  margin-bottom:50px;
+  background-size: cover;
+  margin-bottom: 50px;
   border-radius: 50px;
-
-
 }
-.home-image:hover{
+.home-image:hover {
   transform: scale(1.08);
   cursor: pointer;
   transition: all 0.4s ease-out;
-
 }
 /* https://images-na.ssl-images-amazon.com/images/I/51XF%2BlqXPcL._SX369_BO1,204,203,200_.jpg
 https://images-na.ssl-images-amazon.com/images/I/41tIgunlkBL._SX323_BO1,204,203,200_.jpg
 https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,200_.jpg */
-.main-content{
+.main-content {
   width: 90%;
   margin: auto;
-  padding-bottom:50px; 
+  padding-bottom: 50px;
 }
 .main-content h1 {
   text-align: center;
   margin: 5px;
   padding: 10px;
 }
-.container{
-
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .thumbnail-container {
   display: flex;
   justify-content: space-around;
   width: 100%;
- 
 }
 
 .home-thumbnail-1,
-.home-thumbnail-2
-.home-thumbnail-3{
+.home-thumbnail-2 .home-thumbnail-3 {
   background-size: cover;
   width: 200px;
   height: 300px;
-
 }
 .home-thumbnail-1:hover,
 .home-thumbnail-2:hover,
-.home-thumbnail-3:hover{
+.home-thumbnail-3:hover {
   transform: scale(1.08);
   cursor: pointer;
-
 }
 
-.home-thumbnail-1{
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/51XF%2BlqXPcL._SX369_BO1,204,203,200_.jpg');
+.home-thumbnail-1 {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/51XF%2BlqXPcL._SX369_BO1,204,203,200_.jpg");
   background-size: cover;
   width: 200px;
   height: 300px;
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
 }
-.home-thumbnail-2{
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/41tIgunlkBL._SX323_BO1,204,203,200_.jpg');
+.home-thumbnail-2 {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/41tIgunlkBL._SX323_BO1,204,203,200_.jpg");
   background-size: cover;
   width: 200px;
   height: 300px;
   transition: all 0.3s ease-in-out;
   border-radius: 20px;
 }
-.home-thumbnail-3{
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,200_.jpg ');
+.home-thumbnail-3 {
+  background-image: url("https://images-na.ssl-images-amazon.com/images/I/41QLV9smoDL._SX365_BO1,204,203,200_.jpg ");
   background-size: cover;
   width: 200px;
   height: 300px;
   transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+}
+.books-container {
+  display: inline-block;
+  text-align: center;
+}
+.books-image {
+  width: 240px;
+  height: 360px;
+  /* background-color: aqua; */
+  background-size: cover;
+  border-radius: 10px;
+}
+.back{
+  display: inline-block;
+  margin:5px;
+  border: 1px solid aliceblue;
+  padding: 4px 8px;
   border-radius: 20px;
 }
