@@ -2,8 +2,9 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 
 const Navbar = (props) => (
-  <nav>
-    <h2 className="logo">
+ 
+<div className="nav">
+<h2 className="logo">
       <NavLink className="logo-link" exact to="/">
         {props.title}
       </NavLink>
@@ -30,7 +31,8 @@ const Navbar = (props) => (
         </NavLink>
       </li>
     </ul>
-  </nav>
+</div>
+
 );
 
 export default Navbar;

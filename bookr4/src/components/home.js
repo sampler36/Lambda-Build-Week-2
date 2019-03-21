@@ -1,6 +1,7 @@
 import React from "react";
 
-const Home = (props) => (
+const Home = (props) => {
+  return (
   <div className="main-content">
     <div className="container">
       <h1>{props.title}</h1>
@@ -12,5 +13,6 @@ const Home = (props) => (
       </div>
     </div>
   </div>
-);
+ );
+}
 export default Home;
