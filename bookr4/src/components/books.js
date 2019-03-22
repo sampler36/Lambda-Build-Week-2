@@ -3,11 +3,11 @@ import { BookList } from '../data/books';
 import { Link } from 'react-router-dom';
 
 const Books = (props) => {
-    let books = BookList.map((book) => {
+    let books = BookList.map((bookr) => {
       return (
         <div className="book-container">
-          <Link to={`/books/${book.id}`}><div className="book-image" style={{ backgroundImage: "url(" + book.img_src + ")" }}></div></Link>
-          <h3>{book.title}</h3>
+          <Link to={`/books/${bookr.id}`}><div className="book-image" style={{ backgroundImage: "url(" + bookr.img_src + ")" }}></div></Link>
+          <h3>{bookr.title}</h3>
         </div>
       );
     });

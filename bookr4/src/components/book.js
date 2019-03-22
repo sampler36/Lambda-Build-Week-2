@@ -6,14 +6,14 @@ const Book = (props) => {
       
             <div className="main-content">
                 <div><Link className="back" to="/books">Back</Link></div>
-                <h2>{props.id}</h2>
+                <h2>{props.title}</h2>
                 <div className="container">
-                    <div className="book-profile-image" style={{ backgroundImage: "url(" + props.image + ")" }}></div>
+                    <div className="image-profile" style={{ backgroundImage: "url(" + props.image + ")" }}></div>
                     <h2>{props.id}</h2>
-                    <p>{props.title}}</p>
-                    {/* <p>{props.publisher}}</p>
-                    <p>{props.author}}</p>
-                    <p>{props.summary}}</p> */}
+                    <p>{props.title}</p>
+                    <p>{props.publisher}</p>
+                    <p>{props.author}</p>
+                    <p>{props.summary}</p>
                 </div> 
             </div>
         

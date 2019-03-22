@@ -1,41 +1,3 @@
-// import React from "react";
-// import { BooksList } from "../data/books";
-// import { Route } from "react-router-dom";
-// import Book from "./book";
-// import Books from "./books";
-
-// const BooksContainer = (props) => {
-//   let bookId = BooksList.map((bookr) => {
-//     return (
-//       <Route
-//         path={`/books/${bookr.id}`}
-//         render={() => (
-//           <Book
-//           image={bookr.profile_img}
-//             title={bookr.title}
-//             publisher={bookr.publisher}
-//             summary={bookr.summary}
-//             author={bookr.author}
-//             description={bookr.description}
-//           />
-//         )}
-//       />
-//     );
-//   });
-//   return (
-//     <React.Fragment>
-//       <Route
-//         exact
-//         path="/books"
-//         render={() => <Books title="Our Collection" />}
-//       />
-//       ;{bookId}
-//     </React.Fragment>
-//   );
-// };
-
-// export default BooksContainer;
-
 import React from "react";
 import { BookList } from "../data/books";
 import Book from "./book";
@@ -48,7 +10,7 @@ const BooksContainer = (props) => {
       <Route
         key={i}
         path={`/books/${book.id}`}
-        render={() => (
+        render={() => 
           <Book
             image={book.profile_img}
             title={book.title}
@@ -57,7 +19,7 @@ const BooksContainer = (props) => {
             author={book.author}
             description={book.description}
           />
-        )}
+        }
       />
     );
   });
@@ -66,7 +28,7 @@ const BooksContainer = (props) => {
     <React.Fragment>
       <Route
         exact
-        path="/book"
+        path="/books"
         render={() => <Books title="Our Collections" />}
       />
       {bookId}
