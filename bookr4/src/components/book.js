@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Book = (props) => {
     return (
-      
+      <>
             <div className="main-content">
                 <div><Link className="back" to="/books">Back</Link></div>
                 <h2>{props.title}</h2>
                 <div className="container">
-                    <div className="image-profile" style={{ backgroundImage: "url(" + props.image + ")" }}></div>
+                    <div className="book-profile-image" style={{ backgroundImage: "url(" + props.image + ")" }}></div>
                     <h2>{props.id}</h2>
                     <p>{props.title}</p>
                     <p>{props.publisher}</p>
@@ -16,6 +16,10 @@ const Book = (props) => {
                     <p>{props.summary}</p>
                 </div> 
             </div>
+            <div className>
+
+            </div>
+        </>
         
     );
 }
