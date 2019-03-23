@@ -1,31 +1,38 @@
-import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import "./App.css";
-import Navbar from "./components/navbar";
-import Home from "./components/home";
-import BooksContainer from "./components/booksContainer";
-import Reviews from "./components/reviews";
-import Login from "./components/login";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import Container from './Container';
+// import { comments, bookOfTheDay, spinner } from './state/reducers';
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div className="App">
-          <Navbar title="Bookr" />
-          {/* <Route to="/" component={Home}/> */}
-          {/* <Home title="Our Recomended List" /> */}
-          <Route exact path="/" render={() => <Home title="Top selling" />} />
-          <Route
-            path="/books/"
-            render={() => <BooksContainer title="Our Books" />}
-          />
-          <Route path="/login/" render={() => <Login title="Login" />} />
-          <Route path="/reviews" render={() => <Reviews title="Reviews" />} />
-        </div>
-      </BrowserRouter>
-    );
+// create custom middleware to save 'userToken' to local storage on LOGIN_SUCCESS
+
+const customMiddleware = store => next => action => {
+  console.log('some fire deya', store.getState());
+  if (action.type === 'LOGIN_SUCCESS') {
+    localStorage.setItem('userToken', action.payload);
   }
-}
+  next(action);
+};
 
-export default App;
+
+const rootReducer = combineReducers({
+
+});
+
+const store = createStore(
+  rootReducer,
+  {},
+  compose(
+    applyMiddleware(customMiddleware, thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  ),
+);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Container />
+  </Provider>,
+  document.querySelector('#root'),
+);

@@ -1,3 +1,7 @@
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const MAKE_COMMENT_OF_THE_DAY = 'MAKE_COMMENT_OF_THE_DAY';
+export const SPINNER_ON = 'SPINNER_ON';
+export const SPINNER_OFF = 'SPINNER_OFF';

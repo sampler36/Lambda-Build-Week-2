@@ -1,23 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { login } from '../state/actionCreators';
 
-const Login = (props) => (
-    <div className="main-content">
-      <div className="container">
-        <h1>{props.title}</h1>
-      </div>
-      <div className="row" id="Body">
-        <div className=" columns right">
+export class Login extends React.Component {
+  userRef = React.createRef()
 
-        <label>Username</label>
-        <input type="text" name="username" placeholder="Username" />
-        <label>Password</label>
-        <input type="password" name="password"  placeholder="Password" />
-        <button type="submit" className="button" value="Login" >Login</button>
-        <Link  path="/signup">Registration</Link>
-        </div>
+  passRef = React.createRef()
+
+  onLogin = () => {
+    const username = this.userRef.current.value;
+    const password = this.passRef.current.value;
+
+    this.props.login(username, password);
+  }
+
+  render() {
+    return (
+      <div>
+        <h3>Login</h3>
+        <div>username <input type="text" ref={this.userRef} /></div>
+        <div>password <input type="text" ref={this.passRef} /></div>
+
+        <button onClick={this.onLogin}>Log in</button>
+        {/* Create a Log Out button that flushes 'userToken' from local storage */}
+        <button onClick={() => localStorage.clear()}>Log Out</button>
       </div>
-    </div>
-  );
-  export default Login;
-  
+    );
+  }
+}
+
+// 3 do the actual connecting
+
+export default connect(null, { login })(Login);
