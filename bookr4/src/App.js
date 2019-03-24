@@ -4,7 +4,7 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import Container from './Container';
-// import { comments, bookOfTheDay, spinner } from './state/reducers';
+import { comments, spinner } from './state/reducers';
 
 // create custom middleware to save 'userToken' to local storage on LOGIN_SUCCESS
 
@@ -18,6 +18,8 @@ const customMiddleware = store => next => action => {
 
 
 const rootReducer = combineReducers({
+  comments,
+  spinner,
 
 });
 

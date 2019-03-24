@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { login } from '../state/actionCreators';
+import { login } from '../state/actionCreators'
 
 export class Login extends React.Component {
   userRef = React.createRef()

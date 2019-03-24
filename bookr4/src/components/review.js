@@ -1,18 +1,18 @@
 import React from 'react';
-import { shape, string, func, bool } from 'prop-types';
+import { shape, string, func } from 'prop-types';
 
 
 export default class Comment extends React.Component {
   render() {
-    const { comment, deleteComment, makeCommentOfTheDay, isCommentOfTheDay } = this.props;
+    const { comment, deleteComment } = this.props;
 
     return (
-      <div  highlight={isCommentOfTheDay}>
+      <div>
         <div className='text'>{comment}</div>  
         <em className='author'>{comment}</em>
         <div>
-          <button onClick={() => deleteComment(comment)}>Delete</button>
-          <button onClick={() => makeCommentOfTheDay(comment)}>Top Comment</button>
+          <button onClick={() => deleteComment(comment)}>Delete Comment</button>
+         
         </div>
       </div>
     );
@@ -25,6 +25,4 @@ Comment.propTypes = {
     text: string.isRequired,
   }).isRequired,
   deleteComment: func.isRequired,
-  makeCommentOfTheDay: func.isRequired,
-  isCommentOfTheDay: bool.isRequired,
 };

@@ -6,6 +6,7 @@ import Home from "./components/home";
 import BooksContainer from "./components/booksContainer";
 import Reviews from "./components/reviews";
 import Login from "./components/login";
+import SignUp from "./components/signup";
 
 class Container extends Component {
   render() {
@@ -20,6 +21,7 @@ class Container extends Component {
             path="/books/"
             render={() => <BooksContainer title="Our Books" />}
           />
+          <Route path="/signup/" render={() => <SignUp title="SignUp" />} />
           <Route path="/login/" render={() => <Login title="Login" />} />
           <Route path="/reviews" render={() => <Reviews title="Reviews" />} />
         </div>

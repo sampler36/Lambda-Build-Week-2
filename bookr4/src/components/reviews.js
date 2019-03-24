@@ -1,20 +1,20 @@
 // import React from 'react';
 
-// const Reviews = (props) => (
+// const Comments = (props) => (
 //     <div className="main-content">
 //       <div className="container">
 //         <h1>Reviews Page</h1>
 //       </div>
 //     </div>
 //   );
-//   export default Reviews;
+//   export default Comments;
   
   import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { shape, string, arrayOf, func } from 'prop-types';
 import Comment from './review';
-import { deleteComment, makeCommentOfTheDay } from '../state/actionCreators';
+import { deleteComment } from '../state/actionCreators';
 
 
 export class Comments extends React.Component {
@@ -29,9 +29,7 @@ export class Comments extends React.Component {
               <Comment
                 key={comment.id}
                 comment={comment}
-                makeCommentOfTheDay={this.props.makeCommentOfTheDay}
                 deleteComment={this.props.deleteComment}
-                isCommentOfTheDay={comment.id === this.props.commentOfTheDay}
               />
             ))
           }
@@ -50,24 +48,22 @@ Comment.propTypes = {
   })).isRequired,
   commentOfTheDay: string,
   // functions that change state:
-  makeCommentOfTheDay: func,
+
   deleteComment: func,
 };
 
 function mapStateToProps(state) {
   return {
     comments: state.comments,
-    commentOfTheDay: state.commentOfTheDay,
+
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
     deleteComment,
-    makeCommentOfTheDay,
-    // there are 2 keys missing here!
-    // look at the propTypes for hints
-    // (or imports at the top)
+   
+
   }, dispatch);
 }
 

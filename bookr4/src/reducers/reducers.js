@@ -1,11 +1,16 @@
 
-import dummyComment from '../data/dummyComment';
 // import * as types from './actionTypes';
 // // =================================================================== REDUCERS  (pull out)
 import * as types from './actionTypes';
 
 
-export function comments(state = dummyComment, action) {
+const initialState = {
+    comments: [],
+    loading:false
+}
+
+
+export function comments(state = initialState, action) {
   switch (action.type) {
     case types.ADD_COMMENTS:
       return action.payload;
@@ -28,3 +33,4 @@ export function spinner(isOn = false, action) {
       return isOn;
   }
 }
+
