@@ -5,8 +5,8 @@ import * as types from './actionTypes';
 
 // create an async action creator login, that takes username and password,
 // and hits the login api, and triggers a LOGIN_SUCCESS action with the userToken as payload.
-export const login = (username, password) => dispatch => {
-  fetch(`https://jsonplaceholder.typicode.com/comments/login?username=${username}&password=${password}`)
+export const login = user => dispatch => {
+  fetch(`https://gabe.mockable.io/quotes/login?username=${user.username}&password=${user.password}`)
     .then(res => res.json())
     .then(data => {
       dispatch({ type: 'LOGIN_SUCCESS', payload: data.userToken });

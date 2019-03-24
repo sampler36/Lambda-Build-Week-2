@@ -1,20 +1,9 @@
-// import React from 'react';
-
-// const Comments = (props) => (
-//     <div className="main-content">
-//       <div className="container">
-//         <h1>Reviews Page</h1>
-//       </div>
-//     </div>
-//   );
-//   export default Comments;
-  
-  import React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { shape, string, arrayOf, func } from 'prop-types';
 import Comment from './review';
-import { deleteComment } from '../state/actionCreators';
+import { deleteComment, login } from '../state/actionCreators';
 
 
 export class Comments extends React.Component {
@@ -34,6 +23,7 @@ export class Comments extends React.Component {
             ))
           }
         </div>
+        {/* <button onClick={() => this.props.login({ username: ' me', password: '123' })} > login</button> */}
       </div>
     );
   }
@@ -55,6 +45,7 @@ Comment.propTypes = {
 function mapStateToProps(state) {
   return {
     comments: state.comments,
+    login,
 
   };
 }
